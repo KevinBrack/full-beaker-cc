@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import axios from "axios";
+import InputForm from "../InputForm/InputForm";
+import ImageDisplay from "../ImageDisplay/ImageDisplay";
 const KEY = process.env.REACT_APP_PIXABAY_KEY;
 
 const App = () => {
@@ -13,7 +15,6 @@ const App = () => {
       axios
         .get(URL)
         .then(res => {
-          console.log("RES: ", res);
           setData(res.data.hits);
         })
         .catch(err => console.log(err));
@@ -22,7 +23,14 @@ const App = () => {
     return;
   }, [params]);
 
-  return <div>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</div>;
+  return (
+    <div>
+      <h1>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</h1>
+      <h2>params: {params}</h2>
+      <InputForm setParams={setParams} />
+      <ImageDisplay data={data} />
+    </div>
+  );
 };
 
 export default App;

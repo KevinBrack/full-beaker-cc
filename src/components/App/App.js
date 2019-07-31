@@ -5,7 +5,7 @@ const KEY = process.env.REACT_APP_PIXABAY_KEY;
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [params, setParams] = useState("");
+  const [params, setParams] = useState("&q=dogs");
 
   useEffect(() => {
     const URL = `https://pixabay.com/api/?key=${KEY}${params}`;

@@ -26,7 +26,7 @@ const InputForm = props => {
     "buildings",
     "business",
     "music"
-  ];
+  ].sort();
 
   const handleSubmit = e => {
     e.preventDefault();

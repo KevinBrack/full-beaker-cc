@@ -47,7 +47,7 @@ const InputForm = props => {
 
   return (
     <div>
-      SEARCHING FOR {searchString.toUpperCase()} IN CATEGORY{" "}
+      SEARCHING FOR {searchString.toUpperCase()} IN CATEGORY {/*<--Debugging*/}
       {searchCategory.toUpperCase()}
       <form onSubmit={handleSubmit}>
         <div>

@@ -36,7 +36,7 @@ const InputForm = props => {
       search = search
         .trim()
         .split(" ")
-        .join("&");
+        .join("+");
       params += `&q=${search}`;
     }
     if (searchCategory) {

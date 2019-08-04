@@ -1,17 +1,15 @@
-import React, { useContext } from "react";
-import Thumbnail from "./Thumbnail";
+import React, { useContext, Fragment } from "react";
 import { AppContext } from "../App/AppContext";
+import ImageCard from './ImageCard';
 
 const ImageDisplay = props => {
   const { data } = useContext(AppContext);
-  // need data
-  // thumbnail needs favorites, delFav, addFav
   return (
-    <div>
+    <Fragment>
       {data.map(pic => {
-        return <Thumbnail pic={pic} key={pic.id} />;
+        return <ImageCard pic={pic} key={pic.id} />;
       })}
-    </div>
+    </Fragment>
   );
 };
 

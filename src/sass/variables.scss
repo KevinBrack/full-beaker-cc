@@ -1,3 +1,4 @@
+// COLORS
 $light-gray: #DCDCDC;
 $accent-blue: #3F01D1;
 $accent-pink: #BC4563;
@@ -5,3 +6,20 @@ $accent-orange: #E88935;
 $accent-green: #00A78D;
 $accent-purple: #4A1BB6;
 $black: #000000;
+$global-radius: 0.4rem;
+
+// MIXINS
+@mixin form-style {
+  width: 100%;
+  border: 2px solid $light-gray;
+  border-radius: $global-radius;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+@mixin button {
+  @include form-style();
+  height: 4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

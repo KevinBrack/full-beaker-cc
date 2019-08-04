@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import { AppContext } from "../App/AppContext";
 import { categories } from "../../data";
 import './InputForm.scss';
@@ -26,26 +26,26 @@ const InputForm = props => {
   };
 
   return (
-    <div>
-      SEARCHING FOR {searchString.toUpperCase()} IN CATEGORY {/*<--Debugging*/}
-      {searchCategory.toUpperCase()}
+    <Fragment>
       <form onSubmit={handleSubmit} className="form">
         <div>
-          <label htmlFor="search-form" />
+          {/* <label htmlFor="search-form">Keyword...</label> */}
           <input
             className="form-text-input"
             type="text"
             id="search-form"
             value={searchString}
+            placeholder="Keyword..."
             onChange={e => setSearchString(e.target.value)}
-          />
+            />
         </div>
         <div>
-          <label htmlFor="category-select" />
+          {/* <label htmlFor="category-select" /> */}
           <select
             className="form-select-input"
             id="category-select"
             value={searchCategory}
+            placeholder="Category..."
             onChange={e => setSearchCategory(e.target.value)}
           >
             {categories.map(category => {
@@ -53,9 +53,9 @@ const InputForm = props => {
             })}
           </select>
         </div>
-        <button type="submit" className="form-submit-button">SEARCH</button>
+        <button type="submit" className="form-submit-button">Search</button>
       </form>
-    </div>
+    </Fragment>
   );
 };
 

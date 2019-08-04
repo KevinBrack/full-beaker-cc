@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../App/AppContext";
 import { categories } from "../../data";
+import './InputForm.scss';
 
 const InputForm = props => {
   const { setParams } = useContext(AppContext);
@@ -28,10 +29,11 @@ const InputForm = props => {
     <div>
       SEARCHING FOR {searchString.toUpperCase()} IN CATEGORY {/*<--Debugging*/}
       {searchCategory.toUpperCase()}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="search-form" />
           <input
+            className="form-text-input"
             type="text"
             id="search-form"
             value={searchString}
@@ -41,6 +43,7 @@ const InputForm = props => {
         <div>
           <label htmlFor="category-select" />
           <select
+            className="form-select-input"
             id="category-select"
             value={searchCategory}
             onChange={e => setSearchCategory(e.target.value)}
@@ -50,7 +53,7 @@ const InputForm = props => {
             })}
           </select>
         </div>
-        <button type="submit">SEARCH</button>
+        <button type="submit" className="form-submit-button">SEARCH</button>
       </form>
     </div>
   );

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AppContext } from "../App/AppContext";
 
 const InputForm = props => {
-  const { setParams } = props;
+  const { setParams } = useContext(AppContext);
   const [searchString, setSearchString] = useState("");
   const [searchCategory, setSearchCategory] = useState("");
   const categories = [

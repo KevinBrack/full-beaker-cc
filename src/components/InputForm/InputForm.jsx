@@ -1,33 +1,11 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../App/AppContext";
+import { categories } from "../../data";
 
 const InputForm = props => {
   const { setParams } = useContext(AppContext);
   const [searchString, setSearchString] = useState("");
   const [searchCategory, setSearchCategory] = useState("");
-  const categories = [
-    "",
-    "fashion",
-    "nature",
-    "backgrounds",
-    "science",
-    "education",
-    "people",
-    "feelings",
-    "religion",
-    "health",
-    "places",
-    "animals",
-    "industry",
-    "food",
-    "computer",
-    "sports",
-    "transportation",
-    "travel",
-    "buildings",
-    "business",
-    "music"
-  ].sort();
 
   const handleSubmit = e => {
     e.preventDefault();

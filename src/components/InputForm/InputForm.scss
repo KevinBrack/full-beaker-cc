@@ -1,0 +1,25 @@
+@import '../../sass/variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-text-input {
+  @include form-style();
+  height: 2.5rem;
+  color: $light-gray;
+}
+
+.form-select-input {
+  @include form-style();
+  height: 2rem;
+  cursor: pointer;
+}
+
+.form-submit-button {
+  @include button();
+  background-color: $accent-blue;
+  color: white;
+}

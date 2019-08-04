@@ -1,0 +1,16 @@
+@import '../../sass/variables.scss';
+
+.fav {
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fav.fav-saved {
+  background-color: $accent-orange;
+}
+
+.fav.fav-unsaved {
+  background-color: $accent-pink;
+}

@@ -23,11 +23,6 @@ const Thumbnail = props => {
       >
         <img src={pic.previewURL} alt={pic.tags} />
       </a>
-      {favorites[pic.id] ? (
-        <div onClick={handleRemove}>REMOVE</div>
-      ) : (
-        <div onClick={handleAdd}>SAVE</div>
-      )}
     </Fragment>
   );
 };

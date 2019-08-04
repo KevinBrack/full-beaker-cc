@@ -1,0 +1,11 @@
+* {
+  border: 1px solid blue;
+}
+
+.image-card {
+  display: grid;
+  grid-template-columns: 152px auto;
+  grid-template-rows: 97px auto;
+  margin-bottom: 1rem;
+  width: 100%;
+}

@@ -44,7 +44,7 @@ const App = () => {
         <h2>params: {params}</h2>
         <InputForm />
         <ImageDisplay />
-        <Favorites favorites={favorites} delFav={delFav} />
+        <Favorites />
       </div>
     </AppContext.Provider>
   );

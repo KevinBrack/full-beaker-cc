@@ -1,7 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { AppContext } from "../App/AppContext";
 
 const Favorite = props => {
-  const { favorite, delFav } = props;
+  const { delFav } = useContext(AppContext);
+  const { favorite } = props;
 
   const handleDel = () => {
     delFav(favorite);

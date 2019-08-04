@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Favorite from "./Favorite";
+import { AppContext } from "../App/AppContext";
 
 const Favorites = props => {
-  const { favorites, delFav } = props;
+  const { favorites } = useContext(AppContext);
   return (
     <div>
       {Object.keys(favorites).map(fav => {
-        return <Favorite favorite={fav} delFav={delFav} />;
+        return <Favorite favorite={fav} />;
       })}
     </div>
   );

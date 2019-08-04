@@ -43,12 +43,7 @@ const App = () => {
         <h1>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</h1>
         <h2>params: {params}</h2>
         <InputForm />
-        <ImageDisplay
-          data={data}
-          favorites={favorites}
-          delFav={delFav}
-          addFav={addFav}
-        />
+        <ImageDisplay />
         <Favorites favorites={favorites} delFav={delFav} />
       </div>
     </AppContext.Provider>

@@ -1,7 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { AppContext } from "../App/AppContext";
 
 const Thumbnail = props => {
-  const { pic, favorites, delFav, addFav } = props;
+  const { pic } = props;
+  const { favorites, delFav, addFav } = useContext(AppContext);
 
   const handleAdd = () => {
     console.log(`ADDING ${pic.id}`);

@@ -5,12 +5,22 @@ import InputForm from "../InputForm/InputForm";
 import ImageDisplay from "../ImageDisplay/ImageDisplay";
 import Favorites from "../Favorites/Favorites";
 import useFav from "../../hooks/useFav";
+import { AppContext } from "./AppContext";
 const KEY = process.env.REACT_APP_PIXABAY_KEY;
 
 const App = () => {
   const [data, setData] = useState([]);
   const [params, setParams] = useState("&q=puppies");
   const { favorites, addFav, delFav } = useFav();
+  const contextValue = {
+    data,
+    setData,
+    params,
+    setParams,
+    favorites,
+    addFav,
+    delFav
+  };
 
   // AXIOS REQUEST TO QUERY PIXABAY
   useEffect(() => {
@@ -28,18 +38,20 @@ const App = () => {
   }, [params]);
 
   return (
-    <div>
-      <h1>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</h1>
-      <h2>params: {params}</h2>
-      <InputForm setParams={setParams} />
-      <ImageDisplay
-        data={data}
-        favorites={favorites}
-        delFav={delFav}
-        addFav={addFav}
-      />
-      <Favorites favorites={favorites} delFav={delFav} />
-    </div>
+    <AppContext.Provider value={contextValue}>
+      <div>
+        <h1>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</h1>
+        <h2>params: {params}</h2>
+        <InputForm />
+        <ImageDisplay
+          data={data}
+          favorites={favorites}
+          delFav={delFav}
+          addFav={addFav}
+        />
+        <Favorites favorites={favorites} delFav={delFav} />
+      </div>
+    </AppContext.Provider>
   );
 };
 

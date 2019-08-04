@@ -6,12 +6,10 @@ const Thumbnail = props => {
   const { favorites, delFav, addFav } = useContext(AppContext);
 
   const handleAdd = () => {
-    console.log(`ADDING ${pic.id}`);
     addFav(pic.id);
   };
 
   const handleRemove = () => {
-    console.log(`REMOVING ${pic.id}`);
     delFav(pic.id);
   };
 
@@ -25,7 +23,6 @@ const Thumbnail = props => {
       >
         <img src={pic.previewURL} alt={pic.tags} />
       </a>
-      {/* <div>SAVE</div> */}
       {favorites[pic.id] ? (
         <div onClick={handleRemove}>REMOVE</div>
       ) : (

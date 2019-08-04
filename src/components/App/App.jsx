@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../../sass/index.scss";
 import "./App.scss";
 import axios from "axios";
 import InputForm from "../InputForm/InputForm";
@@ -39,9 +40,7 @@ const App = () => {
 
   return (
     <AppContext.Provider value={contextValue}>
-      <div>
-        <h1>{data.length > 0 ? "DATA RECIEVED" : "NOT YET"}</h1>
-        <h2>params: {params}</h2>
+      <div className="layout-container">
         <InputForm />
         <ImageDisplay />
         <Favorites />

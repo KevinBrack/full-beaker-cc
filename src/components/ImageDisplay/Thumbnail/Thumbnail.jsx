@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import { AppContext } from "../App/AppContext";
+import { AppContext } from "../../App/AppContext";
 
 const Thumbnail = props => {
   const { pic } = props;

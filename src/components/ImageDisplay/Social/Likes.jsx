@@ -1,5 +1,5 @@
 import React from "react";
-import { Star, Thumb } from "../Icons/index";
+import { Star, Thumb } from "../../Icons/index";
 import "./Likes.scss";
 const Likes = props => {
   const { pic } = props;

@@ -1,0 +1,14 @@
+@import "../../../sass/variables.scss";
+
+.tag {
+  // padding: 0.25 0.75rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: white;
+  background-color: $accent-green;
+  margin: 0 0.3rem;
+
+  span {
+    padding: 0.1rem 0.4rem;
+  }
+}

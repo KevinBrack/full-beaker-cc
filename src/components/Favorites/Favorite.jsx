@@ -3,12 +3,8 @@ import { AppContext } from "../App/AppContext";
 import Open from "../../static/images/icons/open.svg";
 
 const Favorite = props => {
-  const { delFav } = useContext(AppContext);
+  // const { delFav } = useContext(AppContext);
   const { favorite } = props;
-
-  const handleDel = () => {
-    delFav(favorite);
-  };
 
   return (
     <div className="favorite-item">

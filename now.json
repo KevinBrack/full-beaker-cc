@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "pixabay",
+  "alias": ["pb.kevinbrack.com"],
   "build": {
     "env": {
       "REACT_APP_PIXABAY_KEY": "@react_app_pixabay_key"

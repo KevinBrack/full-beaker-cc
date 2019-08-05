@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../../sass/index.scss";
 import "./App.scss";
 import axios from "axios";
+import Header from "../Header/Header";
 import InputForm from "../InputForm/InputForm";
 import ImageDisplay from "../ImageDisplay/ImageDisplay";
 import Favorites from "../Favorites/Favorites";
+import Footer from "../Footer/Footer";
 import useFav from "../../hooks/useFav";
 import { AppContext } from "./AppContext";
 const KEY = process.env.REACT_APP_PIXABAY_KEY;
@@ -40,11 +42,13 @@ const App = () => {
 
   return (
     <AppContext.Provider value={contextValue}>
+      <Header />
       <div className="layout-container">
         <InputForm />
         <Favorites />
         <ImageDisplay />
       </div>
+      <Footer />
     </AppContext.Provider>
   );
 };

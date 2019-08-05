@@ -3,7 +3,7 @@ import { Star, Thumb } from "../../Icons/index";
 import "./Likes.scss";
 const Likes = props => {
   const { pic } = props;
-  console.log("PIC: ", pic);
+  // console.log("PIC: ", pic);
   return (
     <div className="social-container">
       <div className="social-likes">

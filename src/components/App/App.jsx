@@ -42,8 +42,8 @@ const App = () => {
     <AppContext.Provider value={contextValue}>
       <div className="layout-container">
         <InputForm />
-        <ImageDisplay />
         <Favorites />
+        <ImageDisplay />
       </div>
     </AppContext.Provider>
   );

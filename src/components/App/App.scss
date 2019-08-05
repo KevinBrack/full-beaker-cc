@@ -1,7 +1,14 @@
 #root {
-  width: 100%
+  width: 100%;
 }
 
+// * {
+//   border: 1px solid red;
+// }
+
 .layout-container {
-  width: 100%;
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }

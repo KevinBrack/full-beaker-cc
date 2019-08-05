@@ -1,15 +1,15 @@
 import React, { useContext, Fragment } from "react";
 import { AppContext } from "../App/AppContext";
-import ImageCard from './ImageCard';
+import ImageCard from "./ImageCard";
 
 const ImageDisplay = props => {
   const { data } = useContext(AppContext);
   return (
-    <Fragment>
+    <div className="image-display-container">
       {data.map(pic => {
         return <ImageCard pic={pic} key={pic.id} />;
       })}
-    </Fragment>
+    </div>
   );
 };
 

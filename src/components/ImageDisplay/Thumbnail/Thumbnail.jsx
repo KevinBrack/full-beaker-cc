@@ -13,16 +13,14 @@ const Thumbnail = props => {
   `;
 
   return (
-    <Background>
-      {/* <a
-        href={pic.largeImageURL}
-        key={pic.id}
-        target="_blank"
-        rel="noopener noreferrer"
-      > */}
-      {/* <img src={pic.previewURL} alt={pic.tags} /> */}
-      {/* </a> */}
-    </Background>
+    <a
+      href={pic.largeImageURL}
+      key={pic.id}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Background />
+    </a>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useContext, Fragment } from "react";
 import { AppContext } from "../App/AppContext";
 import { categories } from "../../data";
-import './InputForm.scss';
+import "./InputForm.scss";
 
 const InputForm = props => {
   const { setParams } = useContext(AppContext);
@@ -37,7 +37,7 @@ const InputForm = props => {
             value={searchString}
             placeholder="Keyword..."
             onChange={e => setSearchString(e.target.value)}
-            />
+          />
         </div>
         <div>
           {/* <label htmlFor="category-select" /> */}
@@ -45,15 +45,20 @@ const InputForm = props => {
             className="form-select-input"
             id="category-select"
             value={searchCategory}
-            placeholder="Category..."
             onChange={e => setSearchCategory(e.target.value)}
           >
             {categories.map(category => {
-              return <option key={category}>{category}</option>;
+              return (
+                <option key={category} value={category}>
+                  {category === "" ? "Category..." : category}
+                </option>
+              );
             })}
           </select>
         </div>
-        <button type="submit" className="form-submit-button">Search</button>
+        <button type="submit" className="form-submit-button">
+          Search
+        </button>
       </form>
     </Fragment>
   );

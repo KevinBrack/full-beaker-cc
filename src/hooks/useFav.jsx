@@ -8,14 +8,14 @@ const useFav = () => {
   const addFav = fav => {
     // console.log(`IN HOOK SETTING ${fav}`);
     const newFav = { ...favorites };
-    newFav[fav] = true;
+    newFav[fav.id] = fav;
     setFavorites(newFav);
   };
 
   const delFav = fav => {
     // console.log(`IN HOOK REMOVING ${fav}`);
     const newFav = { ...favorites };
-    delete newFav[fav];
+    delete newFav[fav.id];
     setFavorites(newFav);
   };
 

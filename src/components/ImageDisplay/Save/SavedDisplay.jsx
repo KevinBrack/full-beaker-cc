@@ -7,11 +7,11 @@ const SavedDisplay = props => {
   const { favorites, delFav, addFav } = useContext(AppContext);
 
   const handleAdd = () => {
-    addFav(pic.id);
+    addFav(pic);
   };
 
   const handleRemove = () => {
-    delFav(pic.id);
+    delFav(pic);
   };
 
   // console.log("FAVORITES: ", favorites);

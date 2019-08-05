@@ -9,7 +9,7 @@ const Favorites = props => {
     <div className="favorites-container">
       <div className="favorites-header">Saved</div>
       {Object.keys(favorites).map(fav => {
-        return <Favorite favorite={fav} key={fav} />;
+        return <Favorite favorite={favorites[fav]} key={fav} />;
       })}
     </div>
   );

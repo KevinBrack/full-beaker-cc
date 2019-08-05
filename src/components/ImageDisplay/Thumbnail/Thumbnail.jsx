@@ -1,17 +1,7 @@
-import React, { Fragment, useContext } from "react";
-import { AppContext } from "../../App/AppContext";
+import React, { Fragment } from "react";
 
 const Thumbnail = props => {
   const { pic } = props;
-  const { favorites, delFav, addFav } = useContext(AppContext);
-
-  const handleAdd = () => {
-    addFav(pic.id);
-  };
-
-  const handleRemove = () => {
-    delFav(pic.id);
-  };
 
   return (
     <Fragment>

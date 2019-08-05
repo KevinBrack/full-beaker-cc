@@ -8,6 +8,12 @@
   height: 100%;
   border-left: 2px solid $light-gray;
   margin-left: 1rem;
+  @media screen and (max-width: $break-small) {
+    border: none;
+    margin-left: none;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
 }
 
 .favorites-header {

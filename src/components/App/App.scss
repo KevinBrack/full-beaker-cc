@@ -1,3 +1,5 @@
+@import "../../sass/variables.scss";
+
 #root {
   width: 100%;
 }
@@ -12,4 +14,8 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   max-width: 800px;
+
+  @media screen and (max-width: $break-small) {
+    grid-template-columns: 1fr;
+  }
 }

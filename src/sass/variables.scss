@@ -8,6 +8,9 @@ $accent-purple: #4a1bb6;
 $black: #000000;
 $global-radius: 0.4rem;
 
+// BREAKPOINTS
+$break-small: 700px;
+
 // MIXINS
 @mixin form-style {
   width: 100%;

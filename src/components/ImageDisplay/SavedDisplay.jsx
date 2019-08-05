@@ -15,7 +15,7 @@ const SavedDisplay =  props => {
     delFav(pic.id);
   };
 
-  console.log("FAVORITES: ", favorites);
+  // console.log("FAVORITES: ", favorites);
   if(favorites[pic.id]) {
     return <div className="fav-saved fav" onClick={handleRemove} >Saved</div>
   } else {

@@ -1,0 +1,12 @@
+@import "../../sass/variables.scss";
+
+.social-container {
+  font-size: 0.8rem;
+  div {
+    margin-right: 1rem;
+  }
+  svg {
+    height: 0.8rem;
+    cursor: pointer;
+  }
+}

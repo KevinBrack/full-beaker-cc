@@ -4,7 +4,7 @@ import './Tags.scss';
 const Tags = props => {
   const {pic} = props;
   const tagsArr = pic.tags.split(", ")
-  console.log("TAGS: ", tagsArr);
+  // console.log("TAGS: ", tagsArr);
   const tagsDisplay = tagsArr.map(tag => {
     return <div className="tag"><span>{tag}</span></div>
   })
